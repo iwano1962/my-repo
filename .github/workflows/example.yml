@@ -1,0 +1,12 @@
+name: Overriode environment variable 
+on: push
+env:
+  EXAMPLE: Defined by workflow level
+jobs:
+  print:
+    run: echo "$BRANCH"
+    steps:
+      - run: echo "${EXAMPLE}"
+      - env:
+          EXAMPLE: Define by step@level
+        run: echo "${EXAMPLE}"
