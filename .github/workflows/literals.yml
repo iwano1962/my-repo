@@ -4,6 +4,6 @@ jobs:
   print:
     runs-on: ubuntu-latest
     steps:
-      - run: printenv | grep 'LITERAL_'
+      - run: printenv | grep '_FUNC'
 
 
