@@ -5,5 +5,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: printenv | grep "GITHUB"
-
-
+        env:
+          LITELAL_NULL: ${{ null }}
+          LITELAL_BOOLEAN: ${{ true }}
+          LITELAL_NUMBER: ${{ 1234 }}
+          LITELAL_STRING: ${{ 'HELLO' }}
+          LITELAL_OMIT_STRING: World
